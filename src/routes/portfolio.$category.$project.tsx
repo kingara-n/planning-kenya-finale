@@ -8,6 +8,38 @@ import { Reveal } from "@/components/site/Reveal";
 import { ProjectSlideshow } from "@/components/site/ProjectSlideshow";
 import { getProject } from "@/data/portfolio";
 
+const formatProjectDetails = (text: string) => {
+  // Clean up corrupted encoding characters from legacy imports
+  let cleaned = text
+    .replace(/\?o/g, '"')
+    .replace(/\?\?/g, '"')
+    .replace(/\?T/g, "'")
+    .replace(/\?"/g, '—')
+    .replace(/,/g, ' ')
+    .replace(/\?/g, ' ');
+  const blocks = cleaned.split('\n').map(s => s.trim()).filter(Boolean);
+  const elements: React.ReactNode[] = [];
+  
+  blocks.forEach((block, index) => {
+    // Split massive paragraphs into smaller neat chunks (3 sentences per paragraph max)
+    const sentences = block.match(/[^.!?]+[.!?]+(?:\s|$)/g);
+    if (sentences && sentences.length > 3) {
+      let currentPara = "";
+      for (let i = 0; i < sentences.length; i++) {
+        currentPara += sentences[i];
+        if ((i + 1) % 3 === 0 || i === sentences.length - 1) {
+          elements.push(<p key={`${index}-${i}`} className="text-white/85 leading-[1.85]">{currentPara.trim()}</p>);
+          currentPara = "";
+        }
+      }
+    } else {
+      elements.push(<p key={index} className="text-white/85 leading-[1.85]">{block}</p>);
+    }
+  });
+
+  return elements;
+};
+
 export const Route = createFileRoute("/portfolio/$category/$project")({
   loader: ({ params }) => {
     const result = getProject(params.category, params.project);
@@ -187,11 +219,12 @@ function Page() {
       {/* Full Description */}
       <section className="px-6 md:px-16 pb-20 max-w-4xl mx-auto">
         <Reveal>
-          <p className="text-sm tracking-[0.3em] text-white/60 mb-8 uppercase">Project Details</p>
-          <div className="space-y-6 text-white/80 font-light leading-relaxed text-[15px] md:text-lg">
-            {project.description.split("\n").filter(p => p.trim() !== "").map((para, idx) => (
-              <p key={idx}>{para}</p>
-            ))}
+          <div className="flex items-center gap-6 mb-10">
+            <p className="text-[11px] tracking-[0.3em] text-white/50 uppercase whitespace-nowrap">Project Details</p>
+            <div className="h-px bg-white/10 w-full flex-1"></div>
+          </div>
+          <div className="space-y-8 md:space-y-10 font-light text-[15px] md:text-[17px]">
+            {formatProjectDetails(project.description)}
           </div>
         </Reveal>
       </section>

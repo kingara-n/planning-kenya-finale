@@ -5,8 +5,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { CtaLink } from "@/components/site/CtaLink";
 import heroImg from "@/assets/hero-nairobi.jpg";
 import tower from "@/assets/project-tower.jpg";
-import interior from "@/assets/project-interior.jpg";
-import urban from "@/assets/project-urban.jpg";
 
 export const Route = createFileRoute("/story")({
   component: Page,
@@ -285,16 +283,24 @@ function Page() {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-20 max-w-7xl mx-auto">
           <Reveal>
             <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16 / 10" }}>
-              <img src={urban} alt="Master planning" className="absolute inset-0 h-full w-full object-cover" />
+              <img
+                src="/assets/images/2024/SECTOR PROFILES/CORPORATE OFFICES/LONRHO HOUSE/IMAGES/LONRHO 3.jpg"
+                alt="Lonrho House"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <p className="absolute bottom-6 left-6 text-white font-light text-xl">Nairobi Rivers Regeneration</p>
+              <p className="absolute bottom-6 left-6 text-white font-light text-xl">Lonrho House, Nairobi</p>
             </div>
           </Reveal>
           <Reveal delay={120}>
             <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16 / 10" }}>
-              <img src={interior} alt="Pangani housing" className="absolute inset-0 h-full w-full object-cover" />
+              <img
+                src="/assets/images/2024/SECTOR PROFILES/HOSPITALITY/SERENA BEACH HOTEL AND SPA SHANZU/IMAGES/01 - Exterior View over the Pool(2).jpg"
+                alt="Mombasa Serena Beach Hotel & Spa"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <p className="absolute bottom-6 left-6 text-white font-light text-xl">Pangani Housing Project</p>
+              <p className="absolute bottom-6 left-6 text-white font-light text-xl">Mombasa Serena Beach Hotel & Spa</p>
             </div>
           </Reveal>
         </div>

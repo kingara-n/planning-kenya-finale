@@ -4,6 +4,7 @@ import logo from "@/assets/planning-logo-white.png";
 
 const links = [
   { label: "Our Story", to: "/story" },
+  { label: "Our Portfolio", to: "/portfolio" },
   { label: "Our Team", to: "/team" },
   { label: "Our Adventures", to: "/adventure" },
 ] as const;
@@ -61,15 +62,6 @@ export function Nav() {
           <img src={logo} alt="Planning" className="h-7 md:h-8 w-auto" />
         </Link>
         <ul className="hidden lg:flex items-center gap-1">
-          <li>
-            <Link
-              to="/portfolio"
-              onClick={pressGlow}
-              className="pk-glass-hover inline-block border border-transparent rounded-full px-4 py-2 text-sm text-white/90 hover:text-white whitespace-nowrap font-light"
-            >
-              Our Portfolio
-            </Link>
-          </li>
           {links.map((l) => (
             <li key={l.label}>
               <Link

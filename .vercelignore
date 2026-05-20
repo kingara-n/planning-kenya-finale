@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+.git
+.wrangler
+.tanstack
+.output
+.vercel
+.nitro
+.vinxi
+logs
+*.log

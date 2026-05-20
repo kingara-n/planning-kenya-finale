@@ -33,3 +33,5 @@ dist-ssr
 
 # Huge backups exceeding GitHub's 100MB file limit
 **/apps.zip
+
+.vercel
