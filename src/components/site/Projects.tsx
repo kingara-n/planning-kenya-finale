@@ -37,7 +37,7 @@ export function Projects() {
           >
             Projects shaping
             <br />
-            the Kenyan horizon.
+            the East African horizon.
           </h2>
         </Reveal>
 

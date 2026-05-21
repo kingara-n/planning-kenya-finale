@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Planning Systems Services Ltd — a Nairobi-based architecture, land use planning and urban design firm shaping the Kenyan horizon since 1978.",
+          "Planning Systems Services Ltd — a Nairobi-based architecture, land use planning and urban design firm shaping the East African horizon since 1978.",
       },
     ],
   }),

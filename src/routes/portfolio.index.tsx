@@ -47,7 +47,7 @@ function Page() {
         <Reveal delay={140}>
           <p className="text-lg md:text-xl text-white/75 font-light max-w-2xl">
             Four decades of architecture, planning and interior design across
-            Kenya — organised by the practice areas that shape our work.
+            East Africa — organised by the practice areas that shape our work.
           </p>
         </Reveal>
 

@@ -29,6 +29,7 @@ export const Route = createFileRoute("/story")({
 });
 
 const milestones = [
+  { year: "1972", title: "Serena Paraa & Chobe Lodges (Uganda)", body: "Jim Archer designs award-winning, landscape-integrated lodges in Uganda's national parks, establishing the regional ethos of architectural conservation and sustainable hospitality." },
   { year: "1978", title: "Founded in Nairobi", body: "Jim Archer and Trevor Andrews open a small office on a balcony above a used-car garage in Nairobi's Industrial Area on 1st May." },
   { year: "1980", title: "Lake View Estate", body: "Win the architectural competition for the acclaimed residential development nestled in the trees of Spring Valley, Lower Kabete." },
   { year: "1988", title: "PLANNING House", body: "Relocate to PLANNING House on Lower Kabete Road — home to the studio for the next 35 years." },
@@ -37,6 +38,7 @@ const milestones = [
   { year: "2000s", title: "Nation Centre & I&M Bank Tower", body: "Take over Nation Centre from the late Henning Larsen and deliver landmark commercial towers alongside the Mombasa Serena Beach Hotel." },
   { year: "2012", title: "World Design Impact Prize", body: "The Community Cooker initiative is awarded the inaugural prize for waste-to-energy innovation." },
   { year: "2020s", title: "Trade & Development Bank HQ", body: "Three-sky-garden TDB headquarters on Lenana Road, Four Points by Sheraton JKIA and the Pangani Housing project mark a new era of resilient, mixed-income design." },
+  { year: "2024", title: "Zanzibar Coastal Resorts (Tanzania)", body: "Complete landmark sustainable luxury hospitality projects on the Zanzibar coastline, including Bweju and Mangapwani developments." },
   { year: "Today", title: "Third Generation", body: "Led by Managing Director Henry Musangi across Nairobi and Mombasa, focused on resilience, climate-conscious design and urban transformation." },
 ];
 
@@ -87,7 +89,7 @@ function Page() {
           <Reveal delay={260}>
             <p className="mt-10 text-white/75 text-lg md:text-2xl font-light max-w-2xl leading-snug">
               From a small balcony above a Nairobi garage in 1978 to a multi-disciplinary
-              practice defining the Kenyan horizon.
+              practice defining the East African horizon.
             </p>
           </Reveal>
         </div>
