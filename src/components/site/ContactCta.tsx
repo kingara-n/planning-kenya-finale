@@ -15,15 +15,7 @@ export function ContactCta() {
             className="text-white font-extralight leading-[1.05] mb-12 md:mb-16"
             style={{ fontWeight: 200, fontSize: "clamp(2.25rem, 5vw, 4.75rem)" }}
           >
-            Have a project&nbsp;
-            <span
-              className="italic text-6xl"
-              style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
-              }}
-            >
-              in mind? Tell us more
-            </span>
+            Have a project in mind? Tell us more
           </h2>
         </Reveal>
         <Reveal delay={180}>
